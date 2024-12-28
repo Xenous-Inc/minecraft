@@ -31,6 +31,7 @@ services:
             MEMORY: 4G
 
             SERVER_NAME: Xenous
+            MOTD: Xenous Minecraft Server
             ICON: https://github.com/Xenous-Inc/brand-assets/blob/main/logo-black.png?raw=true
             OVERRIDE_ICON: true
 
