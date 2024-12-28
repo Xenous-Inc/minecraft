@@ -14,6 +14,10 @@ services:
             # Voice chat port
             - 127.0.0.1:24454:24454/udp
 
+        env_file:
+            - path: ./.env
+              required: true
+
         environment:
             EULA: true
 
@@ -32,8 +36,10 @@ services:
 
             SERVER_NAME: Xenous
             MOTD: Xenous Minecraft Server
-            ICON: https://github.com/Xenous-Inc/brand-assets/blob/main/logo-black.png?raw=true
+            ICON: https://github.com/Xenous-Inc/minecraft/blob/main/logo.png?raw=true
             OVERRIDE_ICON: true
+
+            CF_API_KEY: ${CF_API_KEY}
 
         volumes:
             # attach the relative directory 'data' to the container's /data path
